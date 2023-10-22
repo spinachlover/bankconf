@@ -113,7 +113,8 @@ def process():
             as_attachment=True,
             # mimetype="application/vnd.ms-excel"
         )
-    except Exception:
+    except Exception as e:
+        raise e
         return redirect("/bankconf")
 
 
